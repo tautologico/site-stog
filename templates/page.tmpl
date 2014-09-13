@@ -31,10 +31,29 @@
       </div>
       <div class="navbar-collapse collapse navbar-responsive-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Início</a></li>
-          <li><a href="#textos">Textos</a></li>
-          <li><a href="#ensino">Ensino</a></li>
-          <li><a href="#pesquisa">Pesquisa</a></li>
+          <!-- Inicio -->
+          <if navbar="inicio">
+            <li class="active"> <a href="#">Início</a></li>
+            <li><a href="index.html">Início</a></li>
+          </if>
+
+          <!-- Textos -->
+          <if navbar="textos">
+            <li class="active"> <a href="#">Textos</a></li>
+            <li><a href="textos_main.html">Textos</a></li>
+          </if>
+
+          <!-- Ensino -->
+          <if navbar="ensino">
+            <li class="active"> <a href="#">Ensino</a></li>
+            <li><a href="ensino_main.html">Ensino</a></li>
+          </if>
+
+          <!-- Pesquisa -->
+          <if navbar="pesquisa">
+            <li class="active"> <a href="#">Pesquisa</a></li>
+            <li><a href="pesquisa_main.html">Pesquisa</a></li>
+          </if>
 
           <!-- <li class="dropdown"> -->
           <!--   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a> -->
