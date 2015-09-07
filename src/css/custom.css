@@ -6,4 +6,7 @@ body {
 
 p {
     font-size: 17px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    line-height: 1.6em;
 }
