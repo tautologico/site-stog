@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title><if site-title="">
+           <dummy_/>
+           <dummy_><site-title/> : </dummy_></if><doc-title/></title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic"/>
+    <link rel="stylesheet" type="text/css" href="&lt;site-url/&gt;/css/flatly.min.css"/>
+    <link rel="stylesheet" type="text/css" href="&lt;site-url/&gt;/css/bootswatch.min.css"/>
+    <!-- CSS customizations -->
+    <link rel="stylesheet" type="text/css" href="&lt;site-url/&gt;/css/custom.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+
+    <!-- Navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Andrei Formiga</a>
+      </div>
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+          <!-- Inicio -->
+          <if navbar="inicio">
+            <li class="active"> <a href="#">Início</a></li>
+            <li><a href="&lt;site-url/&gt;/index.html">Início</a></li>
+          </if>
+
+          <!-- Textos -->
+          <if navbar="textos">
+            <li class="active"> <a href="#">Textos</a></li>
+            <li><a href="&lt;site-url/&gt;/textos_main.html">Textos</a></li>
+          </if>
+
+          <!-- Ensino -->
+          <if navbar="ensino">
+            <li class="active"> <a href="#">Ensino</a></li>
+            <li><a href="&lt;site-url/&gt;/ensino_main.html">Ensino</a></li>
+          </if>
+
+          <!-- Pesquisa -->
+          <if navbar="pesquisa">
+            <li class="active"> <a href="#">Pesquisa</a></li>
+            <li><a href="&lt;site-url/&gt;/pesquisa_main.html">Pesquisa</a></li>
+          </if>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="container" role="main">
+      <div class="row">
+        <div class="col-md-8">
+
+          <div class="page-header">
+            <h1>
+              <doc-title/>
+              <p><doc-date format="%Y-%m-%d"/></p>
+            </h1>
+          </div>
+
+          <doc-body/>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="&lt;site-url/&gt;/js/jquery.min.js"></script>
+    <script src="&lt;site-url/&gt;/js/bootstrap.min.js"></script>
+  </body>
+</html>
