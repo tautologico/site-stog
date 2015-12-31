@@ -1,0 +1,36 @@
+<post title="Teste syntax highlighting"
+      date="2015/12/31 14:08"
+      navbar="textos">
+
+<p>
+Segue um exemplo de codigo OCaml:
+</p>
+
+<pre class="line-numbers">
+<code class="language-ocaml"><!--
+-->type peg = Peg1 | Peg2 | Peg3
+
+type move = Move of int * peg * peg
+
+type state = int list array
+
+(** Solve the Hanoi puzzle by moving n disks from peg orig to peg dest. *)
+let rec solve_hanoi n orig dest other =
+  if n = 1 then [Move (1, orig, dest)]
+  else (solve_hanoi (n-1) orig other dest) @ [Move (n, orig, dest)] @ (solve_hanoi (n-1) other dest orig)
+
+let select_from_list l i =
+  let rec loop front tail i =
+    match tail with
+        [] -> failwith "select_from_list: index out of bounds"
+      | x :: rtl ->
+        if i = 0 then (x, (List.rev front) @ rtl)
+        else loop (x::front) rtl (i-1) in
+  loop [] l i
+
+let states = Hashtbl.create 100
+
+let start_state = [|[1; 2; 3; 4]; []; []|]
+</code></pre>
+
+</post>
